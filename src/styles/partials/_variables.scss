@@ -1,0 +1,18 @@
+@use "./typography" as *;
+
+//font family
+$main-font:"Newsreader";
+$primary-font:"Outfit";
+
+//colors
+$primary-text-color:#0C1E1A;
+$primary-accent-color:#1E6655;
+$primary-background-color:#EFFAF7;
+
+$border-color:#B7CEC9;
+$secondary-background-color:#E4EFEC;
+$alternate-text-color:#FFFFFF;
+
+//break point
+$breakpoint-tablet:768px;
+$breakpoint-desktop:1280px;
