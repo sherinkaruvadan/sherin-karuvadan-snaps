@@ -1,8 +1,8 @@
 @use "./typography" as *;
 
 //font family
-$main-font:"Newsreader";
-$primary-font:"Outfit";
+$main-font:"Newsreader", serif;
+$primary-font:"Outfit", sans-serif;
 
 //colors
 $primary-text-color:#0C1E1A;

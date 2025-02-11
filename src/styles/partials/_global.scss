@@ -48,6 +48,14 @@ p {
   }
 }
 
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: $primary-text-color;
+}
+
 .button{
     padding: .5rem 1rem;
     border: 2px solid $primary-accent-color;
