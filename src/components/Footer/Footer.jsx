@@ -3,7 +3,7 @@ import FooterSocialLink from "./FooterSocialLink";
 export default function Footer(){
     const leftLinks = ["For photographers", "Hire talent", "Inspiration"];
     const rightLinks = ["About", "Career", "Support"];
-    const socialLinks = ["facebook", "Twitter", "Instagram", "Pinterest"];
+    const socialLinks = ["facebook", "twitter", "instagram", "pinterest"];
     const legalLinks = ["Terms", "Policy", "Cookies"];
 
     return(
@@ -11,7 +11,7 @@ export default function Footer(){
             <h2 className="wordMark">Snaps</h2>
             <FooterLinkList links={leftLinks} />
             <FooterLinkList links={rightLinks} />
-            <FooterLinkList links={socialLinks} />
+            <FooterSocialLink />
         </footer>
     )
 }
