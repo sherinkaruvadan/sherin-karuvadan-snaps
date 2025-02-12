@@ -1,22 +1,22 @@
 import "./Header.scss";
 import { useState } from "react";
 import filterIcon from "../../assets/images/Filter.svg";
-import tags from "../../data/tags.json";
+// import tags from "../../data/tags.json";
 
-export default function Header() {
-  // console.log(tags);
+export default function Header({tags, selectedFilter, setSelectedFilter}) {
 
   //manage visibility of filters
   const [isFilter, setIsFilter] = useState(false);
 
   const filterButtonHandler = () => {
-    console.log("clicked");
-    console.log(isFilter);
     setIsFilter(!isFilter);
   };
 
   //manage visibility of image on label click
-  // const [isFilterSelected, setIsFilterSelected] = useState(false); 
+  const filterClickHandler = (tag) => {
+    setSelectedFilter(selectedFilter === tag ? "" : tag); 
+    console.log(tag);
+  };
 
   return (
     <header className="header">
@@ -32,7 +32,7 @@ export default function Header() {
         <div className="header__filter-labels">
           {tags.map((tag, index) => {
             return (
-              <button key={index} className="header__filter-label label">
+              <button key={index} className={`header__filter-label label ${selectedFilter===tag ? "active":""}`} onClick={()=>filterClickHandler(tag)}>
                 {tag}
               </button>
             );

@@ -143,7 +143,7 @@ a {
     border-radius: 0.75rem;
   }
 }
-.label:hover {
+.label:hover, .label__active {
   background-color: #1E6655;
   color: #FFFFFF;
 }/*# sourceMappingURL=App.css.map */

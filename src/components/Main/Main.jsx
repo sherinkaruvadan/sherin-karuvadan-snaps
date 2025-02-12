@@ -1,11 +1,18 @@
 import "./Main.scss";
 import photos from "../../data/photos.json";
 
-export default function Main() {
-  let isFilter = false;
+export default function Main({selectedFilter}) {
+  const getFilteredPhotos = () => {
+    if (selectedFilter) {
+      return photos.filter((photo) => photo.tags.includes(selectedFilter));
+    }
+    return photos;
+  };
+  
+  const filteredPhotos = getFilteredPhotos();
   return (
-    <div className={`gallery ${isFilter? "gallery__filter-active" :""}`}>
-      {photos.map((photo) => {
+    <div className="gallery">
+      {filteredPhotos.map((photo) => {
         return (
           <article key={photo.id} className="gallery__image-card">
             <img
