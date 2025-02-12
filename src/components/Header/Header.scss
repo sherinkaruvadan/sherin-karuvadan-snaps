@@ -1,0 +1,21 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+.header{
+    padding: 1rem;
+    margin-bottom: 2rem;
+    &__nav{
+        @include flex(row, space-between, center);
+        padding-bottom: 1.5rem;
+    }
+}
+.hero{
+    &__title{
+        padding: 1rem 0;
+    }
+    &__text--modifier{
+        font-style: italic;
+    }
+    @include desktop{
+        width: 60%;
+    }
+}

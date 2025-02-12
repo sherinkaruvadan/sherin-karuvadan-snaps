@@ -1,1 +1,49 @@
-/*# sourceMappingURL=Header.css.map */
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-Light.woff") format("woff"), url("../../assets/fonts/Newsreader-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff"), url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-Regular.woff") format("woff"), url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("../../assets/fonts/Outfit-Light.woff") format("woff"), url("../../assets/fonts/Outfit-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"), url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+.header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.hero__title {
+  padding: 1rem 0;
+}
+.hero__text--modifier {
+  font-style: italic;
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    width: 60%;
+  }
+}/*# sourceMappingURL=Header.css.map */
