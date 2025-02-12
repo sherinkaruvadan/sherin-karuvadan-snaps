@@ -2,8 +2,9 @@ import "./Main.scss";
 import photos from "../../data/photos.json";
 
 export default function Main() {
+  let isFilter = false;
   return (
-    <div className="gallery">
+    <div className={`gallery ${isFilter? "gallery__filter-active" :""}`}>
       {photos.map((photo) => {
         return (
           <article key={photo.id} className="gallery__image-card">

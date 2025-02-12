@@ -9,26 +9,20 @@ export default function Header() {
   //manage visibility of filters
   const [isFilter, setIsFilter] = useState(false);
 
-  const buttonHandler = () => {
+  const filterButtonHandler = () => {
     console.log("clicked");
     console.log(isFilter);
     setIsFilter(!isFilter);
   };
 
   //manage visibility of image on label click
-  const [isFilterSelected, setIsFilterSelected] = useState(false);
-
-  const filterHandler = ()=>{
-    console.log(" label clicked");
-    console.log(isFilterSelected);
-    setIsFilterSelected(!isFilterSelected);
-  }
+  const [isFilterSelected, setIsFilterSelected] = useState(false); 
 
   return (
     <header className="header">
       <nav className="header__nav">
         <h2 className="header__wordmark logo">Snaps</h2>
-        <button onClick={buttonHandler} className= {`button button__filter ${isFilter ? "button__active":""}`}>
+        <button onClick={filterButtonHandler} className= {`button button__filter ${isFilter ? "button__active":""}`}>
           Filters
           <img src={filterIcon} alt="Filter Icon" className="button__filter" />
         </button>
@@ -38,7 +32,7 @@ export default function Header() {
         <div className="header__filter-labels">
           {tags.map((tag, index) => {
             return (
-              <button onClick={filterHandler} key={index} className="header__filter-label label">
+              <button key={index} className="header__filter-label label">
                 {tag}
               </button>
             );

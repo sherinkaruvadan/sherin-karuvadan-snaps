@@ -47,5 +47,14 @@
     &__image-card {
       max-width: 32%;
     }
+    &__filter-active{
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__filter-active .gallery__image-card{
+      max-width: 48%;
+    }
   }
 }
