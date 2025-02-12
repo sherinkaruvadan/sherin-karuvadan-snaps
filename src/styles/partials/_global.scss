@@ -3,6 +3,7 @@
 
 body {
   color: $primary-text-color;
+  background-color: $primary-background-color;
 }
 
 h1 {
@@ -54,6 +55,10 @@ li{
 a{
   text-decoration: none;
   color: $primary-text-color;
+}
+
+.logo{
+  padding-bottom: 24px;
 }
 
 .button{

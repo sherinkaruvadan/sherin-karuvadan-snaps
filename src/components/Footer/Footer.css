@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-Light.woff") format("woff"), url("../../assets/fonts/Newsreader-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-LightItalic.woff") format("woff"), url("../../assets/fonts/Newsreader-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Newsreader;
+  src: url("../../assets/fonts/Newsreader-Regular.woff") format("woff"), url("../../assets/fonts/Newsreader-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("../../assets/fonts/Outfit-Light.woff") format("woff"), url("../../assets/fonts/Outfit-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"), url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+.footer {
+  padding: 1rem;
+}
+.footer__wordmark {
+  flex-grow: 1rem;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-bottom: 1rem;
+}
+.footer__link {
+  padding-bottom: 0.5rem;
+}
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.footer__legalLinks {
+  color: #B7CEC9;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+}
+.footer__legalLink {
+  color: #B7CEC9;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 3rem;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+  .footer__wordmark {
+    flex-grow: 10rem;
+    flex-basis: 45%;
+  }
+  .footer__icons {
+    width: 100%;
+  }
+  .footer__icon {
+    width: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__icons {
+    width: auto;
+    padding-top: 0;
+  }
+  .footer__icon {
+    width: 1.5rem;
+  }
+}/*# sourceMappingURL=Footer.css.map */
