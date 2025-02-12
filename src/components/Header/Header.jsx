@@ -32,7 +32,7 @@ export default function Header({tags, selectedFilter, setSelectedFilter}) {
         <div className="header__filter-labels">
           {tags.map((tag, index) => {
             return (
-              <button key={index} className={`header__filter-label label ${selectedFilter===tag ? "active":""}`} onClick={()=>filterClickHandler(tag)}>
+              <button key={index} className={`header__filter-label label ${selectedFilter===tag ? "label__active":""}`} onClick={()=>filterClickHandler(tag)}>
                 {tag}
               </button>
             );
