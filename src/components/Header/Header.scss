@@ -32,19 +32,3 @@
         }
     }
 }
-.hero{
-    padding: 1rem;
-    &__title{
-        padding: 1rem 0;
-    }
-    &__text--modifier{
-        font-style: italic;
-    }
-    @include desktop{
-        width: 60%;
-    }
-}
-.hidden{
-    display: none;
-  }
-  

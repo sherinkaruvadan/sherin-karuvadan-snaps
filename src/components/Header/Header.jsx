@@ -16,7 +16,7 @@ export default function Header() {
   };
 
   //manage visibility of image on label click
-  const [isFilterSelected, setIsFilterSelected] = useState(false); 
+  // const [isFilterSelected, setIsFilterSelected] = useState(false); 
 
   return (
     <header className="header">
@@ -39,16 +39,6 @@ export default function Header() {
           })}
         </div>
       </div>
-      <section className="hero">
-        <p className="hero__title">Our Mission:</p>
-        <h1 className="hero__text">
-          Provide photographers a space to share photos of the neighbourhoods
-          they cherish,{" "}
-          <span className="hero__text--modifier">
-            expressed in their unique style.
-          </span>
-        </h1>
-      </section>
     </header>
   );
 }
