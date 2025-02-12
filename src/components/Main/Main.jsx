@@ -6,7 +6,7 @@ export default function Main() {
     <div className="gallery">
       {photos.map((photo) => {
         return (
-          <article className="gallery__image-card">
+          <article key={photo.id} className="gallery__image-card">
             <img
               src={photo.photo}
               alt={photo.photoDescription}
@@ -14,8 +14,8 @@ export default function Main() {
             />
             <p className="gallery__image-photographer">{photo.photographer}</p>
             <div className="gallery__image-tags">
-              {photo.tags.map((tag) => {
-                return <button className="gallery__image-tag label">{tag}</button>;
+              {photo.tags.map((tag, index) => {
+                return <button key={index} className="gallery__image-tag label">{tag}</button>;
               })}
             </div>
           </article>

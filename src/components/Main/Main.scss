@@ -11,6 +11,8 @@
   }
   &__image {
     max-width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
   &__image-photographer {
     position: absolute;
@@ -35,6 +37,7 @@
     flex-wrap: wrap;
     &__image-card {
       max-width: 48.5%;
+      border-radius: .75rem;
     }
     &__image-photographer{
         bottom: 4.4rem;

@@ -36,6 +36,8 @@
 }
 .gallery__image {
   max-width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .gallery__image-photographer {
   position: absolute;
@@ -68,6 +70,7 @@
   }
   .gallery__image-card {
     max-width: 48.5%;
+    border-radius: 0.75rem;
   }
   .gallery__image-photographer {
     bottom: 4.4rem;

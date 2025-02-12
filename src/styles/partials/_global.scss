@@ -65,6 +65,7 @@ a{
     padding: .5rem 1rem;
     border-radius: 3rem;
     border: 2px solid $primary-accent-color;
+    cursor: pointer;
     &__filter{
       background-color: $primary-background-color;
       @include flex(row);
@@ -73,6 +74,11 @@ a{
     @include tablet{
         padding: .6875rem 1.375rem;
     }
+    &:hover{
+      background-color: $primary-accent-color;
+      color: $alternate-text-color;
+      
+}
 }
 
 .label {
@@ -85,6 +91,7 @@ a{
   padding: .375rem .5rem;
   border-radius: .375rem;
   border: 1px solid $primary-accent-color;
+  cursor: pointer;
   @include tablet{
     font-size: .875rem;
     line-height: 1.0938rem;
@@ -96,3 +103,4 @@ a{
     color: $alternate-text-color;
   }
 }
+
