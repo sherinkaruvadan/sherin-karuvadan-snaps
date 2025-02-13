@@ -58,6 +58,11 @@
 }
 .gallery__image-tag {
   color: #0C1E1A;
+  cursor: default;
+}
+.gallery__image-tag:hover {
+  color: #0C1E1A;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .gallery {

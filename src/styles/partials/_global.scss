@@ -74,6 +74,10 @@ a {
   &:hover, &__active{
     background-color: $primary-accent-color;
     color: $alternate-text-color;
+
+    // img{
+    //   background-color: $primary-accent-color;
+    // }
   }
   @include tablet {
     padding: 0.6875rem 1.375rem;

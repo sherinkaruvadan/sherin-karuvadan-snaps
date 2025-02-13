@@ -30,6 +30,12 @@
   }
   &__image-tag {
     color: $primary-text-color;
+    cursor: default;
+    &:hover{
+      color: $primary-text-color;
+      background-color: $alternate-text-color; //newly added to remove hover effect from label
+
+    }
   }
   @include tablet {
     @include flex(row, space-between);

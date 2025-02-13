@@ -26,6 +26,7 @@
 }
 .hero {
   padding: 1rem;
+  padding-top: 5rem;
 }
 .hero__title {
   padding: 1rem 0;
@@ -37,6 +38,7 @@
 @media screen and (min-width: 1280px) {
   .hero {
     width: 60%;
+    padding-top: 7rem;
   }
 }
 

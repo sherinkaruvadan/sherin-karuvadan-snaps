@@ -34,10 +34,17 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 1.5rem;
+  position: fixed;
+  top: 0; /* Sticks to the top */
+  width: 100%;
+  background: #EFFAF7;
+  color: #0C1E1A;
+  padding: 10px;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
 .header__filter {
   padding: 1rem;
-  padding-bottom: 2rem;
+  padding-top: 7rem;
   background-color: #E4EFEC;
 }
 .header__filter-title {
