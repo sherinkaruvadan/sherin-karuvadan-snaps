@@ -2,57 +2,10 @@
 @use "../../styles/partials/mixin" as *;
 .gallery {
   padding: 1rem;
-  // &__image-card {
-  //   margin: 1rem 0;
-  //   background-color: $secondary-background-color;
-  //   border: 1px solid $border-color;
-  //   border-radius: 0.5rem;
-  //   position: relative;
-  // }
-  // &__image {
-  //   max-width: 100%;
-  //   border-top-left-radius: 0.5rem;
-  //   border-top-right-radius: 0.5rem;
-  // }
-  // &__image-photographer {
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 4rem;
-  //   background-color: $secondary-background-color;
-  //   padding: 0.5rem;
-  //   border: 0.5px solid $border-color;
-  //   border-top-left-radius: 0.5rem;
-  // }
-  // &__image-tags {
-  //   padding: 1rem;
-  //   @include flex(row);
-  //   gap: 1rem;
-  // }
-  // &__image-tag {
-  //   color: $primary-text-color;
-  //   cursor: default;
-  //   &:hover{
-  //     color: $primary-text-color;
-  //     background-color: $alternate-text-color; //newly added to remove hover effect from label
-
-  //   }
-  // }
   @include tablet {
     @include flex(row, space-between);
     gap: 1rem;
     flex-wrap: wrap;
-    // &__image-card {
-    //   max-width: 48.5%;
-    //   border-radius: .75rem;
-    // }
-    // &__image-photographer{
-    //     bottom: 4.4rem;
-    //    font-size: 1rem;
-    // }
   }
-  @include desktop {
-    // &__image-card {
-    //   max-width: 32%;
-    // }
-  }
+ 
 }

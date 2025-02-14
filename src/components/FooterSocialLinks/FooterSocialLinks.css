@@ -24,14 +24,34 @@
   src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"), url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
   font-weight: 500;
 }
+.footer__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 1rem 0;
+}
 @media screen and (min-width: 768px) {
-  .wordmark {
-    flex-basis: 45%;
+  .footer__icons {
+    width: 100%;
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__icons {
+    width: auto;
+    padding-top: 0;
   }
 }
 
-.logo {
-  padding-bottom: 1.5rem;
-  font-weight: 400;
-  font-size: 3rem;
-}/*# sourceMappingURL=Wordmark.css.map */
+@media screen and (min-width: 768px) {
+  .footer__icon {
+    width: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__icon {
+    width: 1.5rem;
+  }
+}/*# sourceMappingURL=FooterSocialLinks.css.map */

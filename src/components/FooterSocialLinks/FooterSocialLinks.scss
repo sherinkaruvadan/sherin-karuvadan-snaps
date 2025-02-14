@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixin"as *;
+.footer__icons{
+    @include flex(row);
+    gap: 2rem;
+    padding: 1rem 0;
+    @include tablet{
+        width: 100%;
+        padding-top: 10rem;
+    }
+    @include desktop{
+        width: auto;
+        padding-top: 0;
+    }
+}
+.footer__icon{
+    @include tablet{
+        width: 2rem;
+    }
+    @include desktop{
+        width: 1.5rem;
+    }
+}

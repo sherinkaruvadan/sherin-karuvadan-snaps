@@ -24,14 +24,10 @@
   src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"), url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
   font-weight: 500;
 }
-@media screen and (min-width: 768px) {
-  .wordmark {
-    flex-basis: 45%;
-  }
-}
-
-.logo {
-  padding-bottom: 1.5rem;
-  font-weight: 400;
-  font-size: 3rem;
-}/*# sourceMappingURL=Wordmark.css.map */
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=FooterLinkList.css.map */

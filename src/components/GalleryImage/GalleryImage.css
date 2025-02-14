@@ -55,11 +55,12 @@
 }
 .gallery__image-tag {
   color: #0C1E1A;
+  border: 1px solid #B7CEC9;
   cursor: default;
 }
 .gallery__image-tag:hover {
   color: #0C1E1A;
-  background-color: #FFFFFF;
+  background-color: #B7CEC9;
 }
 @media screen and (min-width: 768px) {
   .gallery__image-card {
@@ -74,5 +75,10 @@
 @media screen and (min-width: 1280px) {
   .gallery__image-card {
     max-width: 32%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery--filtered .gallery__image-card {
+    max-width: 48.5%;
   }
 }/*# sourceMappingURL=GalleryImage.css.map */

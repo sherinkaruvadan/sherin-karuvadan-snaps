@@ -1,0 +1,12 @@
+@use "../../styles/partials/mixin"as *;
+.wordmark{
+    @include tablet{
+        flex-basis: 45%;
+    }
+}
+
+.logo {
+    padding-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 3rem;
+  }

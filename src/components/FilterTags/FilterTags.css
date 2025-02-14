@@ -43,11 +43,7 @@
 @media screen and (min-width: 1280px) {
   .filters {
     padding: 1rem;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 10rem;
-    width: 33%;
+    width: 30%;
   }
 }
 

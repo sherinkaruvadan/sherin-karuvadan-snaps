@@ -1,8 +1,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 .header {
-  // padding: 1rem;
-  margin-bottom: 2rem;
+  padding-top: 1rem;
+  // margin-bottom: 2rem;
   &__nav {
     padding: 1rem;
     @include flex(row, space-between, center);

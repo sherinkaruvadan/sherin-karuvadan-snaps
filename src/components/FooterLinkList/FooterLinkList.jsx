@@ -1,4 +1,5 @@
-import FooterLink from "./FooterLink"
+import "./FooterLinkList.scss";
+import FooterLink from "../FooterLink/FooterLink";
 export default function FooterLinkList({links}){
 
     return(

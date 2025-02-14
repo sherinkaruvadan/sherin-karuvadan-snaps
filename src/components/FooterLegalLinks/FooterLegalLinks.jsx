@@ -1,4 +1,5 @@
-import FooterLegalLink from "./FooterLegalLink"
+import "./FooterLegalLinks.scss";
+import FooterLegalLink from "../FooterLegalLink/FooterLegalLink"
 
 export default function FooterLegalLinks({links}){
 return(

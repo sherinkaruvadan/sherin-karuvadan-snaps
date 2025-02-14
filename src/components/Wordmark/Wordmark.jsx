@@ -1,7 +1,7 @@
 import "./Wordmark.scss"
 const Wordmark = () => {
   return (
-    <h2 className="wordmark logo">Snaps</h2>
+    <h1 className="wordmark logo">Snaps</h1>
   )
 }
 

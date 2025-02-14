@@ -1,0 +1,5 @@
+@use "../../styles/partials/mixin"as *;
+.footer__links {
+  @include flex(column);
+  padding-bottom: 1rem;
+}

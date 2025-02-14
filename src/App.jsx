@@ -1,17 +1,23 @@
 import "./App.scss";
 import { useState } from "react";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Gallery from "./components/Gallery/Gallery";
+import FilterTags from "./components/FilterTags/FilterTags";
+import Main from "./components/Main/Main";
+// import Hero from "./components/Hero/Hero";
+// import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
 import tags from "./data/tags.json";
-import FilterTags from "./components/FilterTags/FilterTags";
+
+
 
 function App() {
   //manage visibility of filters
   const [isFilter, setIsFilter] = useState(false);
 
   const filterButtonHandler = () => {
+    if(isFilter){       
+      setSelectedFilter(""); // ensure the selcted filter is removed on clicking filters button
+    }
     setIsFilter(!isFilter);
   };
 
@@ -27,14 +33,15 @@ function App() {
   return (
     <>
       <Header isFilter={isFilter} filterButtonHandler={filterButtonHandler}/>
-      <FilterTags
+      {/* <FilterTags
         tags={tags}
         isFilter={isFilter}
         selectedFilter={selectedFilter}
         filterClickHandler={filterClickHandler}
-      />
-      <Hero />
-      <Gallery selectedFilter={selectedFilter} />
+      /> */}
+      <Main tags={tags} isFilter={isFilter} selectedFilter ={selectedFilter} filterClickHandler={filterClickHandler} />
+      {/* <Hero />
+      <Gallery selectedFilter={selectedFilter} /> */}
       <Footer />
     </>
   );

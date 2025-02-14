@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixin" as *;
+.main-container{
+    @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+.heroGallery-container{
+    @include desktop{
+        width: 75%;
+    }
+}

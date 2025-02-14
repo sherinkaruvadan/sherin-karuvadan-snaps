@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 .gallery {
-//   padding: 1rem;
+  //   padding: 1rem;
   &__image-card {
     margin: 1rem 0;
     background-color: $secondary-background-color;
@@ -30,29 +30,34 @@
   }
   &__image-tag {
     color: $primary-text-color;
+    border: 1px solid $border-color;
     cursor: default;
-    &:hover{
+    &:hover {
       color: $primary-text-color;
-      background-color: $alternate-text-color; //newly added to remove hover effect from label
-
+      background-color: $border-color; //newly added to remove hover effect from label
     }
   }
   @include tablet {
-    // @include flex(row, space-between);
-    // gap: 1rem;
-    // flex-wrap: wrap;
     &__image-card {
       max-width: 48.5%;
-      border-radius: .75rem;
+      border-radius: 0.75rem;
     }
-    &__image-photographer{
-        bottom: 4.4rem;
-       font-size: 1rem;
+    &__image-photographer {
+      bottom: 4.4rem;
+      font-size: 1rem;
     }
   }
   @include desktop {
     &__image-card {
       max-width: 32%;
+    }
+  }
+  // Pass isFilter state and Apply 2 images per row on desktop when a filter is selected
+  &--filtered {
+    @include desktop {
+      .gallery__image-card {
+        max-width: 48.5%;
+      }
     }
   }
 }

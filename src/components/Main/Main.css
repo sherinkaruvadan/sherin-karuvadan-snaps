@@ -24,14 +24,16 @@
   src: url("../../assets/fonts/Outfit-Medium.woff") format("woff"), url("../../assets/fonts/Outfit-Medium.woff2") format("woff2");
   font-weight: 500;
 }
-@media screen and (min-width: 768px) {
-  .wordmark {
-    flex-basis: 45%;
+@media screen and (min-width: 1280px) {
+  .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 
-.logo {
-  padding-bottom: 1.5rem;
-  font-weight: 400;
-  font-size: 3rem;
-}/*# sourceMappingURL=Wordmark.css.map */
+@media screen and (min-width: 1280px) {
+  .heroGallery-container {
+    width: 75%;
+  }
+}/*# sourceMappingURL=Main.css.map */

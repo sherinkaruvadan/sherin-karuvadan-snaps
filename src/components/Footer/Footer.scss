@@ -2,52 +2,13 @@
 @use "../../styles/partials/mixin"as *;
 .footer{
     padding: 1rem;
-    &__wordmark{
-        flex-grow: 1rem;
-    }
-    &__links{
-        @include flex(column);
-        padding-bottom: 1rem;
-    }
-    &__link{
-        padding-bottom: 0.5rem;
-    }
-    &__icons{
-        @include flex(row);
-        gap: 2rem;
-        padding: 1rem 0;
-    }
-    &__legalLinks{
-        color: $border-color;
-        @include flex(row);
-        gap: 1rem;
-    }
-    &__legalLink{
-        color: $border-color;
-    }
     @include tablet{
+        padding-top: 2.5rem;
         @include flex(row, space-between);
-        gap: 3rem;
         text-align: left;
         flex-wrap: wrap;
-        &__wordmark{
-            flex-grow: 10rem;
-            flex-basis: 45%;
-        }
-        &__icons{
-            width: 100%;
-        }
-        &__icon{
-            width: 2rem;
-        }
     }
     @include desktop{
-        &__icons{
-            width: auto;
-            padding-top: 0;
-        }
-        &__icon{
-            width: 1.5rem;
-        }
+        padding-top: 5rem;
     }
 }

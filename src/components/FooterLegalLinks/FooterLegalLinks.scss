@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin"as *;
+.footer__legalLinks{
+    color: $border-color;
+    @include flex(row);
+    gap: 1rem;
+    @include desktop{
+        padding-top: 10rem;
+    }
+}

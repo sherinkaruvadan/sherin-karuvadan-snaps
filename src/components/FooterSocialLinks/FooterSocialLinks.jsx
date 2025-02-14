@@ -1,3 +1,4 @@
+import "./FooterSocialLinks.scss";
 import facebookIcon from "../../assets/images/Facebook.svg";
 import twitterIcon from "../../assets/images/X_twitter.svg";
 import instagramIcon from "../../assets/images/Instagram.svg";
