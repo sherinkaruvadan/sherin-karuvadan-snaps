@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 .gallery {
-  padding: 1rem;
+//   padding: 1rem;
   &__image-card {
     margin: 1rem 0;
     background-color: $secondary-background-color;
@@ -38,9 +38,9 @@
     }
   }
   @include tablet {
-    @include flex(row, space-between);
-    gap: 1rem;
-    flex-wrap: wrap;
+    // @include flex(row, space-between);
+    // gap: 1rem;
+    // flex-wrap: wrap;
     &__image-card {
       max-width: 48.5%;
       border-radius: .75rem;

@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixin" as *;
 .hero{
     padding: 1rem;
-    padding-top: 5rem;
+    // padding-top: 5rem;
     &__title{
         padding: 1rem 0;
         font-weight: 300;
@@ -12,10 +12,8 @@
     }
     @include desktop{
         width: 60%;
-        padding-top: 7rem;
+        // padding-top: 7rem;
     }
 }
-.hidden{
-    display: none;
-  }
+
   
