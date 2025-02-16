@@ -1,10 +1,7 @@
 import "./App.scss";
 import { useState } from "react";
 import Header from "./components/Header/Header";
-import FilterTags from "./components/FilterTags/FilterTags";
 import Main from "./components/Main/Main";
-// import Hero from "./components/Hero/Hero";
-// import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
 import tags from "./data/tags.json";
 
@@ -33,15 +30,7 @@ function App() {
   return (
     <>
       <Header isFilter={isFilter} filterButtonHandler={filterButtonHandler}/>
-      {/* <FilterTags
-        tags={tags}
-        isFilter={isFilter}
-        selectedFilter={selectedFilter}
-        filterClickHandler={filterClickHandler}
-      /> */}
       <Main tags={tags} isFilter={isFilter} selectedFilter ={selectedFilter} filterClickHandler={filterClickHandler} />
-      {/* <Hero />
-      <Gallery selectedFilter={selectedFilter} /> */}
       <Footer />
     </>
   );

@@ -7,13 +7,6 @@
     padding: 1rem;
     @include flex(row, space-between, center);
     padding-bottom: 1.5rem;
-    // position: fixed;
-    // top: 0; /* Sticks to the top */
-    // width: 100%;
-    // background: $primary-background-color;
-    // color: $primary-text-color;
-    // padding: 10px;
-    // z-index: 1000; /* Ensures it stays above other elements */
   }
 }
 

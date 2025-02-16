@@ -95,36 +95,6 @@ a {
   color: #0C1E1A;
 }
 
-.button {
-  padding: 0.5rem 1rem;
-  border-radius: 3rem;
-  border: 2px solid #1E6655;
-  cursor: pointer;
-}
-.button__filter {
-  background-color: #EFFAF7;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  gap: 0.5rem;
-}
-.button__svg {
-  fill: #1E6655;
-}
-.button:hover, .button__active {
-  background-color: #1E6655;
-  color: #FFFFFF;
-}
-.button:hover .button__svg, .button__active .button__svg {
-  fill: white;
-}
-@media screen and (min-width: 768px) {
-  .button {
-    padding: 0.6875rem 1.375rem;
-  }
-}
-
 .label {
   background-color: #FFFFFF;
   color: #1E6655;

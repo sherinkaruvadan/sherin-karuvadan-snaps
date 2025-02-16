@@ -1,5 +1,5 @@
 import "./GalleryImage.scss"
-const GalleryImage = ({photo, isFilter}) => {
+const GalleryImage = ({photo}) => {
   return (
     <article key={photo.id} className="gallery__image-card">
     <img

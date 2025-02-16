@@ -58,31 +58,31 @@ a {
 }
 
 
-.button {
-  padding: 0.5rem 1rem;
-  border-radius: 3rem;
-  border: 2px solid $primary-accent-color;
-  cursor: pointer;
-  &__filter {
-    background-color: $primary-background-color;
-    @include flex(row);
-    gap: 0.5rem;
-  }
-  &__svg{
-    fill: #1E6655;
-  }
-  &:hover, &__active{
-    background-color: $primary-accent-color;
-    color: $alternate-text-color;
-    .button__svg{
-      fill: white;
-    }
-  }
+// .button {
+//   padding: 0.5rem 1rem;
+//   border-radius: 3rem;
+//   border: 2px solid $primary-accent-color;
+//   cursor: pointer;
+//   &__filter {
+//     background-color: $primary-background-color;
+//     @include flex(row);
+//     gap: 0.5rem;
+//   }
+//   &__svg{
+//     fill: #1E6655;
+//   }
+//   &:hover, &__active{
+//     background-color: $primary-accent-color;
+//     color: $alternate-text-color;
+//     .button__svg{
+//       fill: white;
+//     }
+//   }
  
-  @include tablet {
-    padding: 0.6875rem 1.375rem;
-  }
-}
+//   @include tablet {
+//     padding: 0.6875rem 1.375rem;
+//   }
+// }
 
 .label {
   background-color: $alternate-text-color;
