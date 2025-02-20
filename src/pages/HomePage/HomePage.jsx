@@ -16,12 +16,13 @@ const HomePage = () => {
   //set state variables for photos
   const [tags, setTags] = useState([]);
 
+
   //fetch tags from api
 
   useEffect(()=>{
     const fetchTags = async ()=>{
       const response = await axios.get(`${baseUrl}tags?api_key=${api_key}`);
-      console.log(response.data);
+      // console.log(response.data);
       setTags(response.data);
     }
     fetchTags();

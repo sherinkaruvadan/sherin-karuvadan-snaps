@@ -58,32 +58,6 @@ a {
 }
 
 
-// .button {
-//   padding: 0.5rem 1rem;
-//   border-radius: 3rem;
-//   border: 2px solid $primary-accent-color;
-//   cursor: pointer;
-//   &__filter {
-//     background-color: $primary-background-color;
-//     @include flex(row);
-//     gap: 0.5rem;
-//   }
-//   &__svg{
-//     fill: #1E6655;
-//   }
-//   &:hover, &__active{
-//     background-color: $primary-accent-color;
-//     color: $alternate-text-color;
-//     .button__svg{
-//       fill: white;
-//     }
-//   }
- 
-//   @include tablet {
-//     padding: 0.6875rem 1.375rem;
-//   }
-// }
-
 .label {
   background-color: $alternate-text-color;
   color: $primary-accent-color;
@@ -106,3 +80,23 @@ a {
     color: $alternate-text-color;
   }
 }
+
+input,
+textarea {
+  margin: 0.5rem 0 1rem 0;
+  padding: .5rem;
+  min-height: 1.875rem;
+  min-width: 17.5rem;
+  border-radius: 0.25rem;
+  border: .125rem solid $border-color;
+  background-color: $alternate-text-color;
+  &:focus{
+    outline: none;
+    border-color: $primary-accent-color;
+  }
+  @include tablet {
+    min-height: 2.5rem;
+    padding: .5rem 1rem;
+  }
+}
+

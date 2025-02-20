@@ -34,9 +34,11 @@ const Comments = ({ baseUrl, api_key, comments, setComments }) => {
           const date = new Date(comment.timestamp).toLocaleDateString();
           return (
             <article key={comment.id} className="comment__card">
+              <div className="comment__header">
               <p className="comment__name">{comment.name}</p>
+              <p className="comment__date">{date}</p>
+              </div>
               <p className="comment__text">{comment.comment}</p>
-              <span className="comment__date">{date}</span>
             </article>
           );
         })}

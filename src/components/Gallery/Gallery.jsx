@@ -17,7 +17,7 @@ export default function Gallery({ isFilter, selectedFilter }) {
   useEffect(() => {
     const fetchPhotos = async () => {
       const response = await axios.get(`${baseUrl}photos?api_key=${api_key}`);
-      console.log(response.data);
+      // console.log(response.data);
       setPhotos(response.data);
     };
     fetchPhotos();
@@ -35,7 +35,7 @@ export default function Gallery({ isFilter, selectedFilter }) {
     <div className={`gallery ${isFilter ? "gallery--filtered" : ""}`}>
       {filteredPhotos.map((photo) => {
         return (
-            <GalleryImage photo={photo} />
+            <GalleryImage  key={photo.id} photo={photo} />
         
         );
       })}

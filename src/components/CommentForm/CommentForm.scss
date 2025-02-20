@@ -1,5 +1,22 @@
 @use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/variables" as *;
 
 .comment__form{
-    @include flex(column)
+    padding: 1rem;
+    @include flex(column);
+    width: 100%;
+
+    &-button{
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        background-color: $primary-accent-color;
+        align-self: flex-end;
+        border: 1px solid $primary-accent-color;
+        color: $alternate-text-color;
+    }
+
 }
+
+.form__error{
+    border-color: red;
+  }

@@ -15,7 +15,7 @@ const PhotoDetails = () => {
   //extract id 
   const { id } = useParams();
   //set state variables
-  const [photoDetails, setPhotoDetails] = useState(id);
+  const [photoDetails, setPhotoDetails] = useState(null);
 
   //Lifting the state for reflecting the newly added comment immediately in page
   const [comments, setComments] = useState([]);
@@ -25,7 +25,7 @@ const PhotoDetails = () => {
     const fetchPhotoDetails = async ()=>{
       try{
         const response = await axios.get(`${baseUrl}photos/${id}?api_key=${api_key}`);
-        console.log(response.data);
+        // console.log(response.data);
         setPhotoDetails(response.data)
       }
      catch(error){
@@ -35,12 +35,15 @@ const PhotoDetails = () => {
     fetchPhotoDetails();
   },[id]);
 
+  if(!photoDetails){
+    return <>Loading...</>
+  }
+
   return (
     <>
       <Header />
-     <img src={photoDetails.photo} width={300} alt="" />
-      {/* <GalleryImage photo={photoDetails} /> */}
-      
+      <GalleryImage photo={photoDetails} />
+    
       <CommentForm id ={id} baseUrl={baseUrl} api_key={api_key} />
       <Comments baseUrl={baseUrl} api_key={api_key} comments={comments} setComments={setComments} />
     </>

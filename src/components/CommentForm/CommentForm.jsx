@@ -15,6 +15,13 @@ const CommentForm = ({id, baseUrl, api_key}) => {
     const form = event.target;
     event.preventDefault();
     console.log(formValues);
+    console.log(formValues.name);
+
+    //checking the comments length 
+    if (formValues.name.trim() === "" || formValues.comment.trim() === "") {
+      console.error("Error: Name and comment cannot be empty.");
+      return; 
+    }
 
     try{
         const response = await axios.post(`${baseUrl}photos/${id}/comments?api_key=${api_key}`, formValues);
@@ -43,7 +50,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
       onChange={handleInputChange}
       required
       />
-      <button type="submit" className="button">Submit</button>
+      <button type="submit" className="comment__form-button">Submit</button>
     </form>
   );
 };
