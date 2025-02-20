@@ -14,7 +14,7 @@ const PhotoDetails = () => {
   //extract id 
   const { id } = useParams();
   //set state variables
-  const [photoDetails, setPhotoDetails] = useState(null);
+  const [photoDetails, setPhotoDetails] = useState(id);
 
   // fetch details from API
   useEffect(()=>{
@@ -33,9 +33,10 @@ const PhotoDetails = () => {
 
   return (
     <>
-      <div>PhotoDetails</div>
+     <img src={photoDetails.photo} width={300} alt="" />
       {/* <GalleryImage photo={photoDetails} /> */}
-      <CommentForm />
+      
+      <CommentForm id ={id}/>
       <Comments />
     </>
   );
