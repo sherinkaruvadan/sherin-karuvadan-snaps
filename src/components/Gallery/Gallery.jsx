@@ -35,9 +35,8 @@ export default function Gallery({ isFilter, selectedFilter }) {
     <div className={`gallery ${isFilter ? "gallery--filtered" : ""}`}>
       {filteredPhotos.map((photo) => {
         return (
-          <Link key={photo.id} to={`photo/${photo.id}`} >
             <GalleryImage photo={photo} />
-          </Link>
+        
         );
       })}
     </div>

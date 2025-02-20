@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Header from "../../components/Header/Header";
 import GalleryImage from "../../components/GalleryImage/GalleryImage";
 import Comments from "../../components/Comments/Comments";
 import CommentForm from "../../components/CommentForm/CommentForm";
@@ -36,6 +37,7 @@ const PhotoDetails = () => {
 
   return (
     <>
+      <Header />
      <img src={photoDetails.photo} width={300} alt="" />
       {/* <GalleryImage photo={photoDetails} /> */}
       

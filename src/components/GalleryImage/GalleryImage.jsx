@@ -1,14 +1,17 @@
-import "./GalleryImage.scss"
+import "./GalleryImage.scss";
+import { Link } from "react-router-dom";
 const GalleryImage = ({photo}) => {
   console.log(photo);
   console.log(photo.tags)
   return (
     <article key={photo.id} className="gallery__image-card">
+    <Link to={`/photo/${photo.id}`}>
     <img
       src={photo.photo}
       alt={photo.photoDescription}
       className="gallery__image"
     />
+    </Link> 
     <p className="gallery__image-photographer">{photo.photographer}</p>
     <div className="gallery__image-tags">
       {photo.tags.map((tag, index) => {
