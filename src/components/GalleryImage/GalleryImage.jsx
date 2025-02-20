@@ -1,5 +1,7 @@
 import "./GalleryImage.scss"
 const GalleryImage = ({photo}) => {
+  console.log(photo);
+  console.log(photo.tags)
   return (
     <article key={photo.id} className="gallery__image-card">
     <img

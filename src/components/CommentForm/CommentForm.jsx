@@ -1,11 +1,8 @@
+import "./CommentForm.scss";
 import { useState } from "react";
 import axios from "axios";
 
-const CommentForm = ({id}) => {
-
-    //set the variable with base url
-  const baseUrl = "https://unit-3-project-c5faaab51857.herokuapp.com/";
-  const api_key = "e0eea5f0-0f8c-4b54-9fc4-ff50843766d4";
+const CommentForm = ({id, baseUrl, api_key}) => {
 
   const [formValues, setFormValues] = useState({ name: "", comment: "" });
 
@@ -30,21 +27,23 @@ const CommentForm = ({id}) => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className="comment__form">
       <label htmlFor="name">Name</label>
       <input
        type="text" 
        name="name" 
        value={formValues.name}
        onChange={handleInputChange}
+       required
        />
       <label htmlFor="comment">Comment</label>
       <textarea 
       name="comment" 
       value={formValues.comment}
       onChange={handleInputChange}
+      required
       />
-      <button>Submit</button>
+      <button type="submit" className="button">Submit</button>
     </form>
   );
 };
