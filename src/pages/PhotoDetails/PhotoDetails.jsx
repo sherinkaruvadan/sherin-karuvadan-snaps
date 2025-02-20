@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import GalleryImage from "../../components/GalleryImage/GalleryImage";
+import Comments from "../../components/Comments/Comments";
+import CommentForm from "../../components/CommentForm/CommentForm";
 
 const PhotoDetails = () => {
   //set the variable with base url
@@ -33,6 +35,8 @@ const PhotoDetails = () => {
     <>
       <div>PhotoDetails</div>
       {/* <GalleryImage photo={photoDetails} /> */}
+      <CommentForm />
+      <Comments />
     </>
   );
 };
