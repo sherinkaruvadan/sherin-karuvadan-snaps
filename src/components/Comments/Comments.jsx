@@ -29,14 +29,14 @@ const Comments = ({ baseUrl, api_key, comments, setComments }) => {
   return (
     <>
       <div className="comment">
-        <h4 className="comment__title">{comments.length} Comments</h4>
+        <h4 className="comment__title">{comments.length} {comments.length>1 ? "Comments" : "Comment"}</h4>
         {comments.map((comment) => {
           const date = new Date(comment.timestamp).toLocaleDateString();
           return (
             <article key={comment.id} className="comment__card">
               <div className="comment__header">
-              <p className="comment__name">{comment.name}</p>
-              <p className="comment__date">{date}</p>
+              <p className="comment__name body__copy">{comment.name}</p>
+              <p className="comment__date body__copy">{date}</p>
               </div>
               <p className="comment__text">{comment.comment}</p>
             </article>

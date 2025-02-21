@@ -56,7 +56,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
 
   return (
     <form onSubmit={handleFormSubmit} className="comment__form">
-      <label htmlFor="name">Name</label>
+      <label htmlFor="name" className="form__label">Name</label>
       <input
        type="text" 
        name="name" 
@@ -65,7 +65,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
        className={(isEmpty && formValues.name.trim() === "") ? "form__error" :""}
        required
        />
-      <label htmlFor="comment">Comment</label>
+      <label htmlFor="comment" className="form__label">Comment</label>
       <textarea 
       name="comment" 
       value={formValues.comment}

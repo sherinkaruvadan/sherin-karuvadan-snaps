@@ -5,17 +5,18 @@
     &__card{
         border-top: 1px solid $border-color;
     }
+    &__title{
+        padding-bottom: 1rem;
+        font-family: $primary-font;
+    }
     &__header{
         color: $primary-accent-color;
         @include flex(row, space-between, flex-start);
         padding-top: 1rem;
     }
-    &__title{
-        padding-bottom: 1rem;
-    }
     &__text{
         padding: 1rem 0;
-        font-size: 1rem;
+        // font-size: 1rem;
     }
     @include desktop{
         width: 60%;
