@@ -5,6 +5,9 @@ import axios from "axios";
 const CommentForm = ({id, baseUrl, api_key}) => {
 
   const [formValues, setFormValues] = useState({ name: "", comment: "" });
+  const [isEmpty, setIsEmpty] = useState(false);
+
+  // let isEmpty = false;
 
   const handleInputChange = (event)=>{
     const {name, value} = event.target;
@@ -15,18 +18,36 @@ const CommentForm = ({id, baseUrl, api_key}) => {
     const form = event.target;
     event.preventDefault();
     console.log(formValues);
-    console.log(formValues.name);
-
-    //checking the comments length 
-    if (formValues.name.trim() === "" || formValues.comment.trim() === "") {
+    
+    //checking the name and cmments length 
+    if (formValues.name.trim() === "" && formValues.comment.trim() === "") {
       console.log("Error: Name and comment cannot be empty.");
+      setFormValues({name:"", comment:""});
+      setIsEmpty(true);
+      // isEmpty = true;
       return; 
+    }
+   
+    if(formValues.name.trim() === ""){
+      setFormValues({name:"", comment:formValues.comment});
+      setIsEmpty(true);
+      // isEmpty = true;
+      return;
+    }
+
+   
+    if(formValues.comment.trim() === ""){
+      setFormValues({ name:formValues.name, comment:""});
+      setIsEmpty(true);
+      // isEmpty = true;
+      return;
     }
 
     try{
         const response = await axios.post(`${baseUrl}photos/${id}/comments?api_key=${api_key}`, formValues);
         console.log("Successfully submitted comment")
         setFormValues({name:"", comment:""});
+        setIsEmpty(false);
     }
     catch(error){
         console.error("Error in form submission: ",error)
@@ -41,7 +62,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
        name="name" 
        value={formValues.name}
        onChange={handleInputChange}
-       className={formValues.name.trim()===""?"form__error":""}
+       className={(isEmpty && formValues.name.trim() === "") ? "form__error" :""}
        required
        />
       <label htmlFor="comment">Comment</label>
@@ -49,7 +70,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
       name="comment" 
       value={formValues.comment}
       onChange={handleInputChange}
-      className={formValues.comment.trim()===""?"form__error":""}
+      className={(isEmpty && formValues.comment.trim() === "") ? "form__error" :""}
       required
       />
       <button type="submit" className="comment__form-button">Submit</button>

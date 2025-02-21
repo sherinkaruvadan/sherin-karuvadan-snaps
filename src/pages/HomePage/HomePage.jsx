@@ -52,7 +52,7 @@ const HomePage = () => {
      <>
        <Header isFilter={isFilter} filterButtonHandler={filterButtonHandler}/>
        <Main tags={tags} isFilter={isFilter} selectedFilter ={selectedFilter} filterClickHandler={filterClickHandler} />
-       <Footer />
+       {/* <Footer /> */}
      </>
    );
 }

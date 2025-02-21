@@ -57,16 +57,16 @@ a {
   color: $primary-text-color;
 }
 
-span{
-  font-size: .85rem;
-  line-height: .9375rem;
-  font-weight: 400;
-  font-family: $primary-font;
-  @include tablet{
-    font-size: .875rem;
-    line-height: 1.0938rem;
-  }
-}
+// span{
+//   font-size: .85rem;
+//   line-height: .9375rem;
+//   font-weight: 400;
+//   font-family: $primary-font;
+//   @include tablet{
+//     font-size: .875rem;
+//     line-height: 1.0938rem;
+//   }
+// }
 
 
 .label {
