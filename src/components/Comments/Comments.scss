@@ -15,5 +15,14 @@
     }
     &__text{
         padding: 1rem 0;
+        font-size: 1rem;
+    }
+    @include desktop{
+        width: 60%;
+        margin: 0 auto;
+
+        &__text{
+            font-size: 1.4rem;
+        }
     }
 }

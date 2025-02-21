@@ -92,7 +92,7 @@ textarea {
   background-color: $alternate-text-color;
   &:focus{
     outline: none;
-    border-color: $primary-accent-color;
+    border: .125rem solid $primary-accent-color;
   }
   @include tablet {
     min-height: 2.5rem;

@@ -13,10 +13,17 @@
         align-self: flex-end;
         border: 1px solid $primary-accent-color;
         color: $alternate-text-color;
+        cursor: pointer;
+        &:hover{
+            background-color: $primary-accent-color;
+        }
     }
-
+    @include desktop{
+        width: 60%;
+        margin: 0 auto;
+    }
 }
 
 .form__error{
-    border-color: red;
+    border-color: #B10606;
   }

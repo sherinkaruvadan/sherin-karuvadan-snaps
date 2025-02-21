@@ -19,7 +19,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
 
     //checking the comments length 
     if (formValues.name.trim() === "" || formValues.comment.trim() === "") {
-      console.error("Error: Name and comment cannot be empty.");
+      console.log("Error: Name and comment cannot be empty.");
       return; 
     }
 
@@ -41,6 +41,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
        name="name" 
        value={formValues.name}
        onChange={handleInputChange}
+       className={formValues.name.trim()===""?"form__error":""}
        required
        />
       <label htmlFor="comment">Comment</label>
@@ -48,6 +49,7 @@ const CommentForm = ({id, baseUrl, api_key}) => {
       name="comment" 
       value={formValues.comment}
       onChange={handleInputChange}
+      className={formValues.comment.trim()===""?"form__error":""}
       required
       />
       <button type="submit" className="comment__form-button">Submit</button>
