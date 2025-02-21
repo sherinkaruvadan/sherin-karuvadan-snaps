@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Header from "../../components/Header/Header";
+import ButtonHome from "../../components/ButtonHome/ButtonHome";
 import GalleryImage from "../../components/GalleryImage/GalleryImage";
 import Comments from "../../components/Comments/Comments";
 import CommentForm from "../../components/CommentForm/CommentForm";
+import PhotoDetailss from "../../components/PhotoDetailss/PhotoDetailss";
 
 const PhotoDetails = () => {
   //set the variable with base url
@@ -42,8 +44,9 @@ const PhotoDetails = () => {
   return (
     <>
       <Header />
-      <GalleryImage photo={photoDetails} />
-    
+      {/* <ButtonHome /> */}
+      {/* <GalleryImage photo={photoDetails} /> */}
+    <PhotoDetailss photoDetails={photoDetails} />
       <CommentForm id ={id} baseUrl={baseUrl} api_key={api_key} />
       <Comments baseUrl={baseUrl} api_key={api_key} comments={comments} setComments={setComments} />
     </>

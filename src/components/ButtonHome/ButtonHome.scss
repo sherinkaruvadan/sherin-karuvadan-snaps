@@ -1,0 +1,18 @@
+@use "../../styles/partials/variables" as *;
+.button__home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: $primary-background-color;
+    color: $primary-accent-color;
+    font-size: 1rem;
+    border: none;
+    transition: transform 0.3s ease;
+    &:hover{
+        background-color: $primary-background-color;
+        color: $primary-accent-color;
+        transform: scale(1.1);
+    }
+
+}

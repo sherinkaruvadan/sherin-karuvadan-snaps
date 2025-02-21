@@ -1,7 +1,7 @@
 import "./App.scss";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
-import PhotoDetails from "./pages/PhotoDetails/PhotoDetails";
+import PhotoDetails from "./pages/PhotoDetailsPage/PhotoDetailsPage";
 import Footer from "./components/Footer/Footer";
 
 function App() {

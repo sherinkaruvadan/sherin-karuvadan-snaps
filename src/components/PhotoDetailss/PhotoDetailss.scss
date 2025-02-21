@@ -1,0 +1,43 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+.photo {
+  margin: 0 1rem;
+  background-color: $secondary-background-color;
+  border: 1px solid $border-color;
+  border-radius: 0.75rem;
+  &__image {
+    max-width: 100%;
+  }
+  &__bottom {
+    padding: 1rem;
+    position: relative;
+  }
+  &__likes {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  &__photographer {
+    padding: 0.5rem 0;
+  }
+  &__date {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+  @include tablet {
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__date{
+        position: relative;
+        padding-bottom: 1rem;
+    }
+  }
+  @include desktop{
+    width: 58%;
+    margin: 0 auto;
+  }
+}
