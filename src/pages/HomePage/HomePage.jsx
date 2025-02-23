@@ -50,7 +50,7 @@ const HomePage = () => {
  
    return (
      <>
-       <Header isFilter={isFilter} filterButtonHandler={filterButtonHandler}/>
+       <Header isFilter={isFilter} setIsFilter={setIsFilter} filterButtonHandler={filterButtonHandler}/>
        <Main tags={tags} isFilter={isFilter} selectedFilter ={selectedFilter} filterClickHandler={filterClickHandler} />
        {/* <Footer /> */}
      </>

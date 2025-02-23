@@ -1,11 +1,10 @@
 import "./Header.scss";
-// import { useState } from "react";
 import Wordmark from "../Wordmark/Wordmark";
 import ButtonFilter from "../ButtonFilter/ButtonFilter";
 import ButtonHome from "../ButtonHome/ButtonHome";
 import { useLocation } from "react-router-dom";
 
-export default function Header({ filterButtonHandler, isFilter }) {
+export default function Header({ filterButtonHandler, isFilter, setIsFilter }) {
 
   const location = useLocation();
   //render button based on location
@@ -15,8 +14,7 @@ export default function Header({ filterButtonHandler, isFilter }) {
       <nav className="header__nav">
         <Wordmark />
         {selectedButton}
-        {/* <ButtonFilter filterButtonHandler={filterButtonHandler} isFilter={isFilter} /> */}
-      </nav>
+      </nav> 
     </header>
   );
 }

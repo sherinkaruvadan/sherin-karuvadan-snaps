@@ -101,6 +101,7 @@ textarea {
   border-radius: 0.25rem;
   border: .125rem solid $border-color;
   background-color: $alternate-text-color;
+  font-family: $primary-font;
   &:focus{
     outline: none;
     border: .125rem solid $primary-accent-color;
