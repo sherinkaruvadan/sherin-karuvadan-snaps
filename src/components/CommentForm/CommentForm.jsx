@@ -1,6 +1,7 @@
 import "./CommentForm.scss";
 import { useState } from "react";
 import axios from "axios";
+import { API_URL } from "../../config";
 
 const CommentForm = ({ id, baseUrl, api_key }) => {
   const [formValues, setFormValues] = useState({ name: "", comment: "" });
@@ -38,10 +39,9 @@ const CommentForm = ({ id, baseUrl, api_key }) => {
     //posting the comment
     try {
       const response = await axios.post(
-        `${baseUrl}photos/${id}/comments?api_key=${api_key}`,
+        `${API_URL}/photos/${id}/comments`,
         formValues
       );
-      console.log("Successfully submitted comment");
       setFormValues({ name: "", comment: "" });
       setIsEmpty(false);
     } catch (error) {

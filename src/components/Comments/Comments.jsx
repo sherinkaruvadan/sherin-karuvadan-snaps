@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../config";
 
-const Comments = ({ baseUrl, api_key, comments, setComments }) => {
+const Comments = ({ comments, setComments }) => {
   //extract id
   const { id } = useParams();
   //fetch comments

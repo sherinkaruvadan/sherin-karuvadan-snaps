@@ -18,7 +18,6 @@ export default function Gallery({ isFilter, selectedFilter }) {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(`${API_URL}/photos`);
-        // const response = await axios.get(`${baseUrl}photos?api_key=${api_key}`);
         setPhotos(response.data);
       } catch (error) {
         console.log("Error fetching photos:" + error);
