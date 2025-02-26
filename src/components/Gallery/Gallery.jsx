@@ -1,5 +1,4 @@
 import "./Gallery.scss";
-// import photos from "../../data/photos.json";
 import GalleryImage from "../GalleryImage/GalleryImage";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -16,9 +15,12 @@ export default function Gallery({ isFilter, selectedFilter }) {
   //fetch photos from API
   useEffect(() => {
     const fetchPhotos = async () => {
-      const response = await axios.get(`${baseUrl}photos?api_key=${api_key}`);
-      // console.log(response.data);
-      setPhotos(response.data);
+      try {
+        const response = await axios.get(`${baseUrl}photos?api_key=${api_key}`);
+        setPhotos(response.data);
+      } catch (error) {
+        console.log("Error fetching photos:" + error);
+      }
     };
     fetchPhotos();
   }, []);
@@ -34,10 +36,7 @@ export default function Gallery({ isFilter, selectedFilter }) {
   return (
     <div className={`gallery ${isFilter ? "gallery--filtered" : ""}`}>
       {filteredPhotos.map((photo) => {
-        return (
-            <GalleryImage  key={photo.id} photo={photo} />
-        
-        );
+        return <GalleryImage key={photo.id} photo={photo} />;
       })}
     </div>
   );
