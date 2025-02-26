@@ -1,10 +1,11 @@
 import "./PhotoDetailss.scss";
+import { API_URL } from "../../config";
 const PhotoDetailss = ({ photoDetails }) => {
   const photo = photoDetails;
   return (
     <article key={photo.id} className="photo">
       <img
-        src={photo.photo}
+        src={`${API_URL}/${photo.photo}`}
         alt={photo.photoDescription}
         className="gallery__image photo__image"
       />
@@ -34,9 +35,7 @@ const PhotoDetailss = ({ photoDetails }) => {
           </svg>
           {photo.likes} Likes
         </p>
-        <p className="photo__photographer">
-          Photo by {photo.photographer}
-        </p>
+        <p className="photo__photographer">Photo by {photo.photographer}</p>
         <p className="photo__date">
           {new Date(photo.timestamp).toLocaleDateString()}
         </p>

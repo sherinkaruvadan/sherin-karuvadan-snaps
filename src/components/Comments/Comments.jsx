@@ -2,6 +2,7 @@ import "./Comments.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../../config";
 
 const Comments = ({ baseUrl, api_key, comments, setComments }) => {
   //extract id
@@ -9,10 +10,12 @@ const Comments = ({ baseUrl, api_key, comments, setComments }) => {
   //fetch comments
   useEffect(() => {
     const fetchComments = async () => {
-      const response = await axios.get(
-        `${baseUrl}photos/${id}/comments?api_key=${api_key}`
-      );
-      setComments(response.data);
+      try {
+        const response = await axios.get(`${API_URL}/photos/${id}/comments`);
+        setComments(response.data);
+      } catch (error) {
+        console.error("Error fetching comments: " + error);
+      }
     };
     fetchComments();
   }, [comments]);
