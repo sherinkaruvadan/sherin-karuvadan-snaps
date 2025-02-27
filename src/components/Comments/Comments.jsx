@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../config";
 
-const Comments = ({ comments, setComments }) => {
+const Comments = () => {
+  const [comments, setComments] = useState([]);
   //extract id
   const { id } = useParams();
   //fetch comments
@@ -20,7 +21,7 @@ const Comments = ({ comments, setComments }) => {
     fetchComments();
   }, [comments]);
   //sort comments by date
-  comments = comments.sort((a, b) => {
+  let sortedComments = comments.sort((a, b) => {
     return new Date(b.timestamp) - new Date(a.timestamp);
   });
   //function to display the date from timestamp in the comment
@@ -44,9 +45,10 @@ const Comments = ({ comments, setComments }) => {
     <>
       <div className="comment">
         <h4 className="comment__title">
-          {comments.length} {comments.length > 1 ? "Comments" : "Comment"}
+          {sortedComments.length}{" "}
+          {sortedComments.length > 1 ? "Comments" : "Comment"}
         </h4>
-        {comments.map((comment) => {
+        {sortedComments.map((comment) => {
           const date = timeStamp(comment.timestamp);
           return (
             <article key={comment.id} className="comment__card">

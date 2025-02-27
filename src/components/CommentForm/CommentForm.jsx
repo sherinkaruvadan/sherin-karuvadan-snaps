@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../config";
 
-const CommentForm = ({ id, baseUrl, api_key }) => {
+const CommentForm = ({ id }) => {
   const [formValues, setFormValues] = useState({ name: "", comment: "" });
   const [isEmpty, setIsEmpty] = useState(false);
 

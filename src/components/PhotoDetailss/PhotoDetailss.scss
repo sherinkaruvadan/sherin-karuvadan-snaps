@@ -31,12 +31,12 @@
       justify-content: space-between;
       align-items: center;
     }
-    &__date{
-        position: relative;
-        padding-bottom: 1rem;
+    &__date {
+      position: relative;
+      padding-bottom: 1rem;
     }
   }
-  @include desktop{
+  @include desktop {
     width: 58%;
     margin: 0 auto;
   }

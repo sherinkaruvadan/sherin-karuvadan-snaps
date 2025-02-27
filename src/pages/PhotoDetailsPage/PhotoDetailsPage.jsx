@@ -14,8 +14,8 @@ const PhotoDetails = () => {
   //set state variables
   const [photoDetails, setPhotoDetails] = useState(null);
 
-  //Lifting the state for reflecting the newly added comment immediately in page
-  const [comments, setComments] = useState([]);
+  // Lifting the state for reflecting the newly added comment immediately in page
+  // const [comments, setComments] = useState([]);
 
   // fetch details from API
   useEffect(() => {
@@ -39,7 +39,7 @@ const PhotoDetails = () => {
       <Header />
       <PhotoDetailss photoDetails={photoDetails} />
       <CommentForm id={id} />
-      <Comments comments={comments} setComments={setComments} />
+      <Comments />
     </>
   );
 };
