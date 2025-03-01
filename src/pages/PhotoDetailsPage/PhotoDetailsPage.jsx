@@ -14,9 +14,6 @@ const PhotoDetails = () => {
   //set state variables
   const [photoDetails, setPhotoDetails] = useState(null);
 
-  // Lifting the state for reflecting the newly added comment immediately in page
-  // const [comments, setComments] = useState([]);
-
   // fetch details from API
   useEffect(() => {
     const fetchPhotoDetails = async () => {
@@ -31,7 +28,7 @@ const PhotoDetails = () => {
   }, [id]);
 
   if (!photoDetails) {
-    return <>Error in fetching photo...</>;
+    return <>Loading...</>;
   }
 
   return (

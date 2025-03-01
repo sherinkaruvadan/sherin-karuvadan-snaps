@@ -1,19 +1,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
-.hero{
-    padding: 1rem;
-    // padding-top: 5rem;
-    &__title{
-        padding: 1rem 0;
-        font-weight: 300;
-    }
-    &__text--modifier{
-        font-style: italic;
-    }
-    @include desktop{
-        width: 70%;
-        // padding-top: 7rem;
-    }
+.hero {
+  padding: 1rem;
+  &__title {
+    padding: 1rem 0;
+    font-weight: 300;
+  }
+  &__text--modifier {
+    font-style: italic;
+  }
+  @include desktop {
+    width: 70%;
+  }
 }
-
-  

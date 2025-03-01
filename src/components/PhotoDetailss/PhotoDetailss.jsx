@@ -1,6 +1,8 @@
 import "./PhotoDetailss.scss";
 import { API_URL } from "../../config";
+import timeStamp from "../../utils.js";
 import LikeOutlineSvg from "../../assets/images/Like_Outline.svg";
+
 const PhotoDetailss = ({ photoDetails }) => {
   const photo = photoDetails;
   return (
@@ -25,9 +27,7 @@ const PhotoDetailss = ({ photoDetails }) => {
           {photo.likes} Likes
         </p>
         <p className="photo__photographer">Photo by {photo.photographer}</p>
-        <p className="photo__date">
-          {new Date(photo.timestamp).toLocaleDateString()}
-        </p>
+        <p className="photo__date">{timeStamp(photo.timestamp)}</p>
       </div>
     </article>
   );

@@ -1,29 +1,28 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
-.comment{
-    padding: 1rem;
-    &__card{
-        border-top: 1px solid $border-color;
-    }
-    &__title{
-        padding-bottom: 1rem;
-        font-family: $primary-font;
-    }
-    &__header{
-        color: $primary-accent-color;
-        @include flex(row, space-between, flex-start);
-        padding-top: 1rem;
-    }
-    &__text{
-        padding: 1rem 0;
-        // font-size: 1rem;
-    }
-    @include desktop{
-        width: 60%;
-        margin: 0 auto;
+.comment {
+  padding: 1rem;
+  &__card {
+    border-top: 1px solid $border-color;
+  }
+  &__title {
+    padding-bottom: 1rem;
+    font-family: $primary-font;
+  }
+  &__header {
+    color: $primary-accent-color;
+    @include flex(row, space-between, flex-start);
+    padding-top: 1rem;
+  }
+  &__text {
+    padding: 1rem 0;
+  }
+  @include desktop {
+    width: 60%;
+    margin: 0 auto;
 
-        &__text{
-            font-size: 1.4rem;
-        }
+    &__text {
+      font-size: 1.4rem;
     }
+  }
 }

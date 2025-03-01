@@ -18,11 +18,9 @@
     background-color: $primary-accent-color;
     color: $alternate-text-color;
     .button__svg {
-      // fill: white;
       filter: brightness(0) invert(1);
     }
   }
-
   @include tablet {
     padding: 0.6875rem 1.375rem;
   }

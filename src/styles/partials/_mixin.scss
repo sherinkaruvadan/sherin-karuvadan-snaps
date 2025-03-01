@@ -21,7 +21,7 @@
   justify-content: $justify;
   align-items: $align;
 }
-//add mixin for tag labels
+//add mixin for tag labels that can reuse in gallery image and photo details component
 @mixin tag-container {
   padding: 1rem;
   @include flex(row);

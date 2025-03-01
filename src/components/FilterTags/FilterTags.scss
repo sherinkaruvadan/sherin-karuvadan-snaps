@@ -1,11 +1,10 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 .filters {
-    padding: 1rem;
-    // padding-top: 7rem;
-    padding-bottom: 2rem;
-    background-color: $secondary-background-color;
-  
+  padding: 1rem;
+  padding-bottom: 2rem;
+  background-color: $secondary-background-color;
+
   &__title {
     padding: 1rem 0;
   }
@@ -15,10 +14,10 @@
     flex-wrap: wrap;
   }
   @include desktop {
-      padding: 1rem;
-      width: 30%;
-    }
+    padding: 1rem;
+    width: 30%;
+  }
 }
-.hidden{
+.hidden {
   display: none;
 }

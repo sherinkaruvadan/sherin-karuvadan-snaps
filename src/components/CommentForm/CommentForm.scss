@@ -1,33 +1,33 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/variables" as *;
 
-.comment__form{
-    padding: 1rem;
-    @include flex(column);
-    width: 100%;
+.comment__form {
+  padding: 1rem;
+  @include flex(column);
+  width: 100%;
 
-    &-button{
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        background-color: $primary-accent-color;
-        align-self: flex-end;
-        border: 1px solid $primary-accent-color;
-        color: $alternate-text-color;
-        cursor: pointer;
-        &:hover{
-            background-color: $primary-accent-color;
-        }
+  &-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: $primary-accent-color;
+    align-self: flex-end;
+    border: 1px solid $primary-accent-color;
+    color: $alternate-text-color;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-accent-color;
     }
-    @include desktop{
-        width: 60%;
-        margin: 0 auto;
-    }
-}
-
-.form__label{
-    font-family: $primary-font;
-}
-
-.form__error{
-    border-color: #B10606;
   }
+  @include desktop {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.form__label {
+  font-family: $primary-font;
+}
+
+.form__error {
+  border-color: #b10606;
+}
