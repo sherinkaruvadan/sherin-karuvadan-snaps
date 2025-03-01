@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API_URL } from "../../config";
+import timeStamp from "../../utils.js";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -25,21 +26,21 @@ const Comments = () => {
     return new Date(b.timestamp) - new Date(a.timestamp);
   });
   //function to display the date from timestamp in the comment
-  function timeStamp(timestamp) {
-    const now = new Date();
-    const diffInSeconds = Math.floor((now - timestamp) / 1000);
-    const minutes = Math.floor(diffInSeconds / 60);
-    const hours = Math.floor(minutes / 60);
-    if (minutes < 1) {
-      return "Just Now";
-    } else if (minutes < 60) {
-      return `${minutes} min ago`;
-    } else if (hours < 24) {
-      return `${hours} hour ago`;
-    } else {
-      return new Date(timestamp).toLocaleDateString();
-    }
-  }
+  // function timeStamp(timestamp) {
+  //   const now = new Date();
+  //   const diffInSeconds = Math.floor((now - timestamp) / 1000);
+  //   const minutes = Math.floor(diffInSeconds / 60);
+  //   const hours = Math.floor(minutes / 60);
+  //   if (minutes < 1) {
+  //     return "Just Now";
+  //   } else if (minutes < 60) {
+  //     return `${minutes} min ago`;
+  //   } else if (hours < 24) {
+  //     return `${hours} hour ago`;
+  //   } else {
+  //     return new Date(timestamp).toLocaleDateString();
+  //   }
+  // }
   //inside src, afile utils.js dame level as app.jsx
 
   return (
