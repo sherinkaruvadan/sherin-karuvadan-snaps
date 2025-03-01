@@ -56,6 +56,7 @@ const CommentForm = ({ id }) => {
       <input
         type="text"
         name="name"
+        id="name"
         value={formValues.name}
         onChange={handleInputChange}
         className={
@@ -68,6 +69,7 @@ const CommentForm = ({ id }) => {
       </label>
       <textarea
         name="comment"
+        id="comment"
         value={formValues.comment}
         onChange={handleInputChange}
         className={

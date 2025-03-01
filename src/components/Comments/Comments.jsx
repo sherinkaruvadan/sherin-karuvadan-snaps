@@ -40,6 +40,7 @@ const Comments = () => {
       return new Date(timestamp).toLocaleDateString();
     }
   }
+  //inside src, afile utils.js dame level as app.jsx
 
   return (
     <>

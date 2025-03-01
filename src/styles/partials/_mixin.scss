@@ -21,3 +21,20 @@
   justify-content: $justify;
   align-items: $align;
 }
+//add mixin for tag labels
+@mixin tag-container {
+  padding: 1rem;
+  @include flex(row);
+  gap: 1rem;
+}
+
+@mixin tag-styles {
+  color: $primary-text-color;
+  border: 1px solid $border-color;
+  cursor: default;
+
+  &:hover {
+    color: $primary-text-color;
+    background-color: $border-color;
+  }
+}

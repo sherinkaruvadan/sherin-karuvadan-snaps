@@ -24,18 +24,20 @@
     border-top-left-radius: 0.5rem;
   }
   &__image-tags {
-    padding: 1rem;
-    @include flex(row);
-    gap: 1rem;
+    // padding: 1rem;
+    // @include flex(row);
+    // gap: 1rem;
+    @include tag-container;
   }
   &__image-tag {
-    color: $primary-text-color;
-    border: 1px solid $border-color;
-    cursor: default;
-    &:hover {
-      color: $primary-text-color;
-      background-color: $border-color; //newly added to remove hover effect from label
-    }
+    // color: $primary-text-color;
+    // border: 1px solid $border-color;
+    // cursor: default;
+    // &:hover {
+    //   color: $primary-text-color;
+    //   background-color: $border-color; //newly added to remove hover effect from label
+    // }
+    @include tag-styles;
   }
   @include tablet {
     &__image-card {

@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/photo/:id" element={<PhotoDetails />} />
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );

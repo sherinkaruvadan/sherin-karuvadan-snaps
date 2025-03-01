@@ -24,14 +24,14 @@ const PhotoDetails = () => {
         const response = await axios.get(`${API_URL}/photos/${id}`);
         setPhotoDetails(response.data);
       } catch (error) {
-        console.error("Error fetching photo details" + error);
+        console.log("Error fetching photo details" + error);
       }
     };
     fetchPhotoDetails();
   }, [id]);
 
   if (!photoDetails) {
-    return <>Loading...</>;
+    return <>Error in fetching photo...</>;
   }
 
   return (
